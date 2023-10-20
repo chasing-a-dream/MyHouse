@@ -1,5 +1,7 @@
 package family
 
+import . "fmt"
+
 type Member struct {
 	name string
 	sex  string
@@ -8,7 +10,7 @@ type Member struct {
 }
 
 func (member *Member) GetMember() {
-	print("Name: ", member.name, ", Sex: ", member.sex, ", Age: ", member.age, ", Role: ", member.role)
+	Println("Name:", member.name, ", Sex:", member.sex, ", Age:", member.age, ", Role:", member.role)
 }
 func (member *Member) SetMember(name string, sex string, age int, role string) {
 	member.name = name
