@@ -3,12 +3,13 @@ package initHouse
 import (
 	"MyHouse/family"
 	. "MyHouse/furniture"
+	"MyHouse/homeAppliances"
 )
 
 func InitHouse() {
 	initFamily()
 	initFurniture()
-
+	initAppliances()
 }
 
 func initFamily() {
@@ -55,4 +56,15 @@ func initFurniture() {
 	bookshelf := Furniture{}
 	bookshelf.SetFurniture("bookshelf", "dark_green", "wood", 150, 40)
 	bookshelf.GetFurniture()
+}
+
+func initAppliances() {
+	print("Appliances\n")
+	fridge := homeAppliances.Appliances{}
+	fridge.SetAppliance("fridge", "white", 220, 70, 70)
+	fridge.GetAppliance()
+
+	washingMachine := homeAppliances.Appliances{}
+	washingMachine.SetAppliance("washing machine", "white", 220, 80, 60)
+	washingMachine.GetAppliance()
 }
